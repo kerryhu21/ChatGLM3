@@ -11,8 +11,8 @@ class DistanceConversionInput(BaseModel):
 
 
 class DistanceConverter(BaseTool, abc.ABC):
-    name = "DistanceConverter"
-    description = "Converts distance between meters, kilometers, and feet"
+    name: str = "DistanceConverter"
+    description: str = "Converts distance between meters, kilometers, and feet"
     args_schema: Type[BaseModel] = DistanceConversionInput
 
     def __init__(self):

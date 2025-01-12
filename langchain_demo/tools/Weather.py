@@ -10,8 +10,8 @@ class WeatherInput(BaseModel):
 
 
 class Weather(BaseTool):
-    name = "weather"
-    description = "Use for searching weather at a specific location"
+    name: str = "weather"
+    description: str = "Use for searching weather at a specific location"
     args_schema: Type[BaseModel] = WeatherInput
 
     def __init__(self):

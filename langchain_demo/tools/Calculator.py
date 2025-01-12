@@ -10,8 +10,8 @@ class CalculatorInput(BaseModel):
 
 
 class Calculator(BaseTool, abc.ABC):
-    name = "Calculator"
-    description = "Useful for when you need to calculate math problems"
+    name: str = "Calculator"
+    description: str = "Useful for when you need to calculate math problems"
     args_schema: Type[BaseModel] = CalculatorInput
 
     def __init__(self):

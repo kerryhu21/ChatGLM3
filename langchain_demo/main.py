@@ -52,7 +52,8 @@ Success example:
 import os
 
 from langchain import hub
-from langchain.agents import AgentExecutor, create_structured_chat_agent, load_tools
+from langchain.agents import AgentExecutor, create_structured_chat_agent
+from langchain_community.agent_toolkits.load_tools import load_tools
 from langchain_core.messages import AIMessage, HumanMessage
 
 from ChatGLM3 import ChatGLM3
