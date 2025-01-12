@@ -12,6 +12,9 @@ allowing the user to input questions and receive AI answers.
 from langchain.schema.messages import HumanMessage, SystemMessage, AIMessage
 from langchain_community.llms.chatglm3 import ChatGLM3
 
+import os
+MODEL_PATH = os.environ.get('MODEL_PATH', 'THUDM/chatglm3-6b')
+TOKENIZER_PATH = os.environ.get("TOKENIZER_PATH", MODEL_PATH)
 
 def get_ai_response(messages, user_input):
     endpoint_url = "http://127.0.0.1:8000/v1/chat/completions"
